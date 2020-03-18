@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="djQ-bs-abf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="6Eh-1H-RfY">
+            <objects>
+                <navigationController id="djQ-bs-abf" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="152-5l-8er">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="uta-6V-Ua0" kind="relationship" relationship="rootViewController" id="0vV-Zb-2fR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="shV-NB-H76" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="781"/>
+        </scene>
+        <!--Movie Search Display Controller-->
+        <scene sceneID="Ygw-m5-4fg">
+            <objects>
+                <viewController storyboardIdentifier="MovieSearchDisplayController" id="uta-6V-Ua0" customClass="MovieSearchDisplayController" customModule="MovieSearchingAssigment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xWW-7g-lOZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="80z-4j-XHA">
+                                <rect key="frame" x="0.0" y="88" width="414" height="764"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="uta-6V-Ua0" id="jNw-sy-A6C"/>
+                                    <outlet property="delegate" destination="uta-6V-Ua0" id="TjO-v7-CNp"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HU6-j2-jq9" firstAttribute="trailing" secondItem="80z-4j-XHA" secondAttribute="trailing" id="7R1-HU-WLz"/>
+                            <constraint firstItem="80z-4j-XHA" firstAttribute="top" secondItem="HU6-j2-jq9" secondAttribute="top" id="8D5-sm-vi5"/>
+                            <constraint firstItem="HU6-j2-jq9" firstAttribute="bottom" secondItem="80z-4j-XHA" secondAttribute="bottom" constant="10" id="Sq7-gM-Lno"/>
+                            <constraint firstItem="80z-4j-XHA" firstAttribute="leading" secondItem="HU6-j2-jq9" secondAttribute="leading" id="dLS-8o-tsl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HU6-j2-jq9"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LSZ-fo-HFq"/>
+                    <connections>
+                        <outlet property="tableview" destination="80z-4j-XHA" id="0Id-22-lh7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8hv-nH-ftT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="840.57971014492762" y="784.82142857142856"/>
+        </scene>
+    </scenes>
+</document>
