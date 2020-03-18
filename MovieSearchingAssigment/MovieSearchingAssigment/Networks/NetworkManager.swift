@@ -26,6 +26,7 @@ class NetworkManager {
     }
     
     
+    /// Search a list of of movies by keyword
     @discardableResult public func searchMovieDB(keyword: String, resultHandler: MovieDBFinishHandler?) -> DataRequest {
         let params = ["query": keyword,
                       "api_key": MovieDB.key]
@@ -35,6 +36,7 @@ class NetworkManager {
         }
     }
     
+    /// Aet listt movie genres. Using for first launching the app
     @discardableResult public func getGenres(lang: String = "en-US", resultHandler: GenresDBFinishHandler?) -> DataRequest {
         let params = ["api_key": MovieDB.key, "language": lang]
         return Alamofire.request(MovieDB.genresMethod, parameters: params)
