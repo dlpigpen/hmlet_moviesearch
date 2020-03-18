@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Alamofire
 
-class MovieSearchDisplayController: ViewController {
+class MovieSearchDisplayController: UIViewController {
     
     @IBOutlet weak var tableview: UITableView!
     let searchController = UISearchController(searchResultsController: nil)
